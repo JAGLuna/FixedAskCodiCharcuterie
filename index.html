@@ -1,0 +1,117 @@
+Certainly! I have updated the code to address the issue of empty labels and associated inputs. Here is the revised code:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Charcuterie Board Order Form</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: grid;
+  gap: 10px;
+}
+
+input, select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #f39c12;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <h2>Charcuterie Board Order Form</h2>
+  <form>
+    <label for="fullname">Full Name:</label>
+    <input type="text" id="fullname" placeholder="Full Name" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="Email" required>
+    <label for="phonenumber">Phone Number:</label>
+    <input type="tel" id="phonenumber" placeholder="Phone Number" required>
+    <label for="dateofevent">Date of Event:</label>
+    <input type="text" id="dateofevent" placeholder="Date of Event" required>
+    <label for="starttime">Event Start Time:</label>
+    <input type="text" id="starttime" placeholder="Event Start Time" required>
+    <label for="address">Full Delivery Address:</label>
+    <input type="text" id="address" placeholder="Full Delivery Address" required>
+    
+    <label for="contactmethod">Preferred Contact Method:</label>
+    <select id="contactmethod">
+      <option value="email">Email</option>
+      <option value="phone">Phone</option>
+      <option value="text">Text</option>
+    </select>
+
+    <label for="boardtype">Select Board Type:</label>
+    <select id="boardtype">
+      <option value="small">Small Board</option>
+      <option value="medium">Medium Board</option>
+      <option value="large">Large Board</option>
+    </select>
+
+    <label for="guests">Number of Guests:</label>
+    <input type="number" id="guests" placeholder="Number of Guests">
+    
+    <label for="design">Select Design Preference:</label>
+    <select id="design">
+      <option value="classic">Classic</option>
+      <option value="modern">Modern</option>
+      <option value="rustic">Rustic</option>
+    </select>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<script>
+document.querySelector('form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  // Get user input values
+  const fullname = document.getElementById('fullname').value;
+  const email = document.getElementById('email').value;
+  const phonenumber = document.getElementById('phonenumber').value;
+  const dateofevent = document.getElementById('dateofevent').value;
+  const starttime = document.getElementById('starttime').value;
+  const address = document.getElementById('address').value;
+  const contactmethod = document.getElementById('contactmethod').value;
+  const boardtype = document.getElementById('boardtype').value;
+  const guests = document.getElementById('guests').value;
+  const design = document.getElementById('design').value;
+  
+  // Do something with the user input values
+  console.log(fullname, email, phonenumber, dateofevent, starttime, address, contactmethod, boardtype, guests, design);
+});
+</script>
+</body>
+</html>
+```
+
+Now, the labels for each input field are properly filled and associated with the respective input elements. Let me know if you need further help!
